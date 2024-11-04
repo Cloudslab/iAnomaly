@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locsim-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locsim-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: locsim-svc-deployment
+    spec:
+      containers:
+      - name: locsim-svc-deployment
+        image: dtfernando/locsim:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 9091
+      nodeName: worker1

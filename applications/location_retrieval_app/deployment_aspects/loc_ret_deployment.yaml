@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: locret-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: locret-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: locret-svc-deployment
+    spec:
+      containers:
+      - name: locret-svc-deployment
+        image: dtfernando/locret:latest
+        imagePullPolicy: Always
+        env:
+          - name: LOCSIM_URL
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap-loc-ret
+                key: LOCSIM_URL
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 9090
+      nodeName: worker2

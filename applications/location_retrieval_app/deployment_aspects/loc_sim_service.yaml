@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: locsim-svc-service
+spec:
+  selector:
+    app: locsim-svc-deployment
+  ports:
+  - port: 6200
+    targetPort: 9091
+  type: LoadBalancer
