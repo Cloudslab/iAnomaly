@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mdi-svc-service
+spec:
+  selector:
+    app: mdi-svc-deployment
+  ports:
+  - name: http
+    port: 8081
+  type: LoadBalancer

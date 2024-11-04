@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: producer-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: producer-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: producer-svc-deployment
+    spec:
+      containers:
+      - name: producer-svc-deployment
+        image: dtfernando/producer_sensor:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+      nodeName: worker3

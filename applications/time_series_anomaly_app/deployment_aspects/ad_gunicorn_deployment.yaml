@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ad-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ad-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: ad-svc-deployment
+    spec:
+      containers:
+      - name: ad-svc-deployment
+        image: dtfernando/anomaly_detect_gunicorn:latest
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 8080
+      nodeName: worker2

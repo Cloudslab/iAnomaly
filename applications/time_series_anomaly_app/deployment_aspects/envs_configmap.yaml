@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  AD_URL: "http://ad-svc-service:8080"
+  MDI_URL: "http://mdi-svc-service:8081"
