@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+data:
+  FD_URL: "http://fd-svc-service:6100"
+  FR_URL: "http://fr-svc-service:6000"
+  RTSP_URL : "rtsp://34.129.127.66:8554/live"

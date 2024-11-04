@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: preprocess-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: preprocess-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: preprocess-svc-deployment
+    spec:
+      containers:
+      - name: preprocess-svc-deployment
+        image: dtfernando/preprocess:v1.0amd
+        imagePullPolicy: Always
+        env:
+          - name: RTSP_URL
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: RTSP_URL
+          - name: FD_URL
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: FD_URL
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 3000
+      nodeName: worker1

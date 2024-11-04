@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fd-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fd-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: fd-svc-deployment
+    spec:
+      containers:
+      - name: fd-svc-deployment
+        image: dtfernando/face_detect:v1.0amd
+        imagePullPolicy: Always
+        env:
+          - name: FR_URL
+            valueFrom:
+              configMapKeyRef:
+                name: env-configmap
+                key: FR_URL
+        resources:
+          limits:
+            memory: "3072Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 4000
+      nodeName: worker2

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fr-svc-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fr-svc-deployment
+  template:
+    metadata:
+      labels:
+        app: fr-svc-deployment
+    spec:
+      containers:
+      - name: fr-svc-deployment
+        image: dtfernando/face_recog:v1.0amd
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: "1024Mi"
+            cpu: "1000m"
+        ports:
+        - containerPort: 5000
+      nodeName: worker3
