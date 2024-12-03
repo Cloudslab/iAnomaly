@@ -1,0 +1,1 @@
+Download the res50 model for face recognition separately from this link ([https://drive.google.com/drive/folders/1GuWW6BBrMUUFFvjeIL96gzU8MAvyzZ3F?usp=sharing](https://drive.google.com/drive/folders/1GuWW6BBrMUUFFvjeIL96gzU8MAvyzZ3F?usp=sharing)) and place it in this directory.
