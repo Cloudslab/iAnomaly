@@ -29,7 +29,7 @@ and anomaly data required for the performance anomaly dataset. Refer to “Secti
 for more details.
 
 <div style="text-align: center;">
-    <img src="toolkit_architecture.png" alt="System architecture of iAnomaly" title="System architecture of iAnomaly (newly introduced components in blue)" />
+    <img src="readme_figures/toolkit_architecture.png" alt="System architecture of iAnomaly" title="System architecture of iAnomaly (newly introduced components in blue)" />
     <p><strong>Figure 1:</strong> System architecture of iAnomaly (newly introduced components in blue)</p>
 </div>
 
@@ -38,7 +38,7 @@ realised using Pixie, Jmeter and Chaos Mesh respectively.  For more details, ref
 “Section IV. iAnomaly Implementation” of the iAnomaly paper [1].
 
 <div style="text-align: center;">
-    <img src="deployment_diagram.png" alt="Deployment diagram of the iAnomaly toolkit" title="Deployment diagram of the iAnomaly toolkit" />
+    <img src="readme_figures/deployment_diagram.png" alt="Deployment diagram of the iAnomaly toolkit" title="Deployment diagram of the iAnomaly toolkit" />
     <p><strong>Figure 2:</strong> Deployment diagram of the iAnomaly toolkit</p>
 </div>
 
