@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: memory-stress-example
+  namespace: chaos-mesh
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - 'default'
+    labelSelectors:
+      'app': {{ .Values.appLabel }}
+  stressors:
+    memory:
+      workers: 8
+      size: {{ .Values.size }}

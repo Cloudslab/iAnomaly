@@ -1,0 +1,16 @@
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: chaosmesh_yamls-example
+  namespace: chaos-mesh
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - 'default'
+    labelSelectors:
+      'app': {{ .Values.appLabel }}
+  stressors:
+    cpu:
+      workers: 8
+      load : {{ .Values.load }}

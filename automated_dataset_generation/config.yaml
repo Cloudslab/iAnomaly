@@ -1,0 +1,31 @@
+deployment:
+  deployment_name: "preprocess-svc-deployment"
+  pod_id: "857bd4d5d-pb8mn"
+  server_ip: "172.26.133.208"
+  port_num: 31212
+normal_data:
+  concurrency: 20
+  think_time: 0
+  duration: 60 #3600 <- Equivalent of 1hr
+anomaly_data:
+  anomalies:
+  - type: "user-surge-spike"
+    duration: 60
+    concurrency: 100
+    cool_down_period: 60
+  - type: "user-surge-step"
+    duration: 60
+    concurrency: 100
+    cool_down_period: 60
+  - type: "chaosmesh_yamls"
+    duration: 60
+    load: 100
+    cool_down_period: 60
+  - type: "memory-stress"
+    duration: 60
+    size: '1GB'
+    cool_down_period: 60
+  - type: "network-delay"
+    duration: 60
+    latency: '1100ms'
+    cool_down_period: 60
