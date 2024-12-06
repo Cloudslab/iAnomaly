@@ -34,7 +34,7 @@ for more details.
 </div>
 
 During the implementation of iAnomaly, the open-source tools for monitoring, workload generation and chaos engineering were 
-realised using Pixie, Jmeter and Chaos Mesh respectively.  For more details, refer to the following deployment diagram and 
+realised using Pixie, Jmeter and Chaos Mesh respectively. For more details, refer to the following deployment diagram and 
 “Section IV. iAnomaly Implementation” of the iAnomaly paper [1].
 
 <div style="text-align: center;">
@@ -54,7 +54,7 @@ realised using Pixie, Jmeter and Chaos Mesh respectively.  For more details, ref
    * Jmeter (2 instances in separate VMs outside k8s cluster) - https://dev.to/hitjethva/how-to-install-apache-jmeter-on-ubuntu-20-04-2di9 
    * Chaos Mesh (k8s master node) - https://chaos-mesh.org/docs/quick-start/ 
 
-4) Follow the instructions inside the “Automated Dataset Generation” folder to generate a dataset following the sample configuration inside it.
+4) Follow the instructions inside the `automated_dataset_generation` folder to generate a dataset following the sample configuration inside it.
 
 5) Refer to the sample dataset generated using iAnomaly toolkit at the “Sample Dataset” folder.
 
