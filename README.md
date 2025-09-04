@@ -64,13 +64,12 @@ realised using Pixie, Jmeter and Chaos Mesh respectively. For more details, refe
 ## Cite iAnomaly :
 **BibTeX entry**
 ```
-@misc{fernando2024ianomalytoolkitgeneratingperformance,
-      title={iAnomaly: A Toolkit for Generating Performance Anomaly Datasets in Edge-Cloud Integrated Computing Environments}, 
-      author={Duneesha Fernando and Maria A. Rodriguez and Rajkumar Buyya},
-      year={2024},
-      eprint={2411.02868},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC},
-      url={https://arxiv.org/abs/2411.02868}, 
-}
+@INPROCEEDINGS{10971830,
+  author={Fernando, Duneesha and Rodriguez, Maria A. and Buyya, Rajkumar},
+  booktitle={2024 IEEE/ACM 17th International Conference on Utility and Cloud Computing (UCC)}, 
+  title={iAnomaly: A Toolkit for Generating Performance Anomaly Datasets in Edge-Cloud Integrated Computing Environments}, 
+  year={2024},
+  pages={236-245},
+  keywords={Cloud computing;Image edge detection;Microservice architectures;Quality of service;Computer architecture;Internet of Things;Anomaly detection;Standards;Edge computing;Service level agreements;Edge computing;Microservices;IoT;Performance anomaly detection;Datasets;Emulators},
+  doi={10.1109/UCC63386.2024.00041}}
 ```
