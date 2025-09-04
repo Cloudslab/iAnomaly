@@ -56,7 +56,7 @@ realised using Pixie, Jmeter and Chaos Mesh respectively. For more details, refe
 
 4) Follow the instructions inside the `automated_dataset_generation` folder to generate a dataset following the sample configuration inside it.
 
-5) Refer to the sample dataset generated using iAnomaly toolkit at the “Sample Dataset” folder.
+5) Refer to the sample dataset generated using iAnomaly toolkit at the “sample_dataset” folder.
 
 ## References :
 [1] Duneesha Fernando, Maria A. Rodriguez, and Rajkumar Buyya. 2024. iAnomaly: A Toolkit for Generating Performance Anomaly Datasets in Edge-Cloud Integrated Computing Environments. arXiv:2411.02868 [cs.DC] https://arxiv.org/abs/2411.02868 
